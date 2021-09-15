@@ -19,7 +19,7 @@ jobs:
       - run: npm run docs:build
       - run: git fetch
       - run: git add .
-      - run: git stash #Guardar auxiliarmente los cambios
+      - run: git stash #Guardar auxiliarmente los cambioss
       - run: git checkout gh-pages
       #- run: rm -r docs #Borrar carpeta mydocs
       - run: git stash apply #setear los cambios anteiores

@@ -18,6 +18,7 @@ jobs:
       - run: npm install
       - run: npm run docs:build
       - run: git fetch
+      - run: git add .
       - run: git stash #Guardar auxiliarmente los cambios
       - run: git checkout gh-pages
       - run: git stash apply #setear los cambios anteiores

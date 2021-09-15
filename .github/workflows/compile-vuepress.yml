@@ -21,7 +21,7 @@ jobs:
       - run: git add .
       - run: git stash #Guardar auxiliarmente los cambios
       - run: git checkout gh-pages
-      - run: rm -r docs #Borrar carpeta mydocs
+      #- run: rm -r docs #Borrar carpeta mydocs
       - run: git stash apply #setear los cambios anteiores
     #  - run: rm -r mydocs #Borrar carpeta mydocs
     #  - run: mv dest mydocs  #Rename dest to mydocs

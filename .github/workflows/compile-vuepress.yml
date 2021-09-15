@@ -16,17 +16,17 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
-      - run: npm run docs:build
+      - run: npm run mydocs:build
       - run: git fetch
       - run: git stash #Guardar auxiliarmente los cambios
       - run: git checkout gh-pages
       - run: git stash apply #setear los cambios anteiores
-      - run: rm -r docs #Borrar carpeta docs
-      - run: mv dest docs  #Rename dest to docs
+      - run: rm -r mydocs #Borrar carpeta mydocs
+      - run: mv dest mydocs  #Rename dest to mydocs
       - run: git add .
       - run: git config --global user.email "gustavocondezocamayo@gmail.com"
       - run: git config --global user.name "Gustavo Condezo"
-      - run: git commit -m "docs"
+      - run: git commit -m "mydocs"
       - run: git push origin gh-pages --force
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"

@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "simula un proyecto que contine su dicumentacion en docs",
   "main": "index.js",
-  "directories": {
-    "doc": "mydocs"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:build": "vuepress build --dest ./docs"
+    "build": "vuepress build src --dest ./docs"
   },
 
   "author": "",

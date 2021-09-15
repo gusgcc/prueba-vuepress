@@ -1,0 +1,24 @@
+name: GHActions Compiler Vuepress and deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Compile-commit-push-on-branch-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - run: npm install
+      - run: git checkout gh-pages
+      - run: git merge main
+      - run: npm run build
+      - run: git add .
+      - run: git commit -m 'compiled'
+      - run: git config --global user.email "gustavocondezocamayo@gmail.com"
+      - run: git config --global user.name "Gustavo Condezo"
+      - run: git push origin gh-pages
+

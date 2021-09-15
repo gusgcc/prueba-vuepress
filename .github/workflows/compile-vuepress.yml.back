@@ -16,19 +16,19 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
-      - run: npm run docs:build
+      - run: npm run src:build
       - run: git fetch
       - run: git add .
       - run: git stash #Guardar auxiliarmente los cambioss
       - run: git checkout gh-pages
-      #- run: rm -r docs #Borrar carpeta mydocs
+      #- run: rm -r src #Borrar carpeta src
       - run: git stash apply #setear los cambios anteiores
-    #  - run: rm -r mydocs #Borrar carpeta mydocs
-    #  - run: mv dest mydocs  #Rename dest to mydocs
+    #  - run: rm -r src #Borrar carpeta src
+    #  - run: mv dest src  #Rename dest to src
       - run: git add .
       - run: git config --global user.email "gustavocondezocamayo@gmail.com"
       - run: git config --global user.name "Gustavo Condezo"
-      - run: git commit -m "update docs"
+      - run: git commit -m "update src"
       - run: git push origin gh-pages --force
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"

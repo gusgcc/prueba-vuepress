@@ -13,6 +13,7 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
+      - run: git fetch
       - run: git checkout gh-pages
       - run: git merge main
       - run: npm run build

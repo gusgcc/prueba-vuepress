@@ -24,6 +24,8 @@ jobs:
       - run: rm -r docs #Borrar carpeta docs
       - run: mv dest docs  #Rename dest to docs
       - run: git add .
+      - run: git config --global user.email "gustavocondezocamayo@gmail.com"
+      - run: git config --global user.name "Gustavo Condezo"
       - run: git commit -m "docs"
       - run: git push origin gh-pages --force
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+      - run: git config --global user.email "gustavocondezocamayo@gmail.com"
+      - run: git config --global user.name "Gustavo Condezo Condezo"
       - run: npm install
       - run: git pull origin --allow-unrelated-histories
       - run: git checkout gh-pages
@@ -19,8 +21,6 @@ jobs:
       - run: git merge main --allow-unrelated-histories
       - run: npm run build
       - run: git add .
-      - run: git config --global user.email "gustavocondezocamayo@gmail.com"
-      - run: git config --global user.name "Gustavo Condezo"
       - run: git commit -m 'compiled'
       - run: git push origin gh-pages --force
 

@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: toy probando
+tagline: toy probando vuepress
 actionText: Quick Start →
 actionLink: /guide/
 features:

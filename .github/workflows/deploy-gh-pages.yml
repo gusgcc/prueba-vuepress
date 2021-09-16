@@ -13,6 +13,7 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
+      - run: git pull origin
       - run: git checkout gh-pages
       - run: git config pull.rebase true
       - run: git merge main

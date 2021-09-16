@@ -13,10 +13,10 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
-      - run: git pull origin
+      - run: git pull origin --allow-unrelated-histories
       - run: git checkout gh-pages
       - run: git config pull.rebase true
-      - run: git merge main
+      - run: git merge main --allow-unrelated-histories
       - run: npm run build
       - run: git add .
       - run: git config --global user.email "gustavocondezocamayo@gmail.com"

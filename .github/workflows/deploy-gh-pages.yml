@@ -16,6 +16,7 @@ jobs:
       - run: git fetch
       - run: git checkout gh-pages
       - run: git fetch
+      - run: git config pull.rebase true
       - run: git pull origin main
       - run: git pull origin gh-pages
       - run: git merge main

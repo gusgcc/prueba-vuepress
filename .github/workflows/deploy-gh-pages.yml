@@ -18,8 +18,8 @@ jobs:
       - run: git merge main
       - run: npm run build
       - run: git add .
-      - run: git commit -m 'compiled'
       - run: git config --global user.email "gustavocondezocamayo@gmail.com"
       - run: git config --global user.name "Gustavo Condezo"
+      - run: git commit -m 'compiled'
       - run: git push origin gh-pages
 
